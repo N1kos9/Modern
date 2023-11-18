@@ -9,12 +9,12 @@ const placeholder = document.querySelector(".placeholder");
 const subholder = document.querySelector("#subholder");
 
 function changeColors() {
-  gsap.to("container", { backgroundColor: "#000", duration: 0.5 });
-  gsap.to("placeholder, nav, footer, p", { color: "#fff", duration: 0.5 });
+  gsap.to(".container", { backgroundColor: "#000", duration: 0.5 });
+  gsap.to(".placeholder, nav, footer, p", { color: "#fff", duration: 0.5 });
 }
 function revertColors() {
-  gsap.to("container", { backgroundColor: "#e3e3e3", duration: 0.5 });
-  gsap.to("placeholder, nav, footer, p", { color: "#000", duration: 0.5 });
+  gsap.to(".container", { backgroundColor: "#e3e3e3", duration: 0.5 });
+  gsap.to(".placeholder, nav, footer, p", { color: "#000", duration: 0.5 });
 }
 
 items.forEach((item) => {
@@ -63,7 +63,7 @@ function shuffleLetters(finalText) {
 
   function shuffle(index) {
     if (shufflingCounter < 30) {
-      textArray[index] = "ABCDEFGHIJKLMNOUPQRSTVWXZY"[
+      textArray[index] = "ABCDEFGHIJKLMNOPQRSTUVWXZY"[
         Math.floor(Math.random() * 26)
       ];
       placeholder.children[index].textContent = textArray[index];
